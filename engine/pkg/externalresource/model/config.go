@@ -49,7 +49,7 @@ func (c *Config) S3Enabled() bool {
 	if c.S3.Bucket == "" {
 		return false
 	}
-	return c.S3.RoleARN != "" || (c.S3.Endpoint != "" &&
+	return c.S3.Bucket != "" || (c.S3.Endpoint != "" &&
 		c.S3.AccessKey != "" && c.S3.SecretAccessKey != "")
 }
 
